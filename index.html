@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPS Tracking</title>
+    <center>
+    <style>
+        body {
+            background-color: #254117;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .scroll-box {
+            height: 300px;
+            width: 60%;
+            overflow-y: scroll;
+            background-color: #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1 {
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            margin-top: 40px;
+        }
+        .api-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .api-input {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .api-submit {
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TrackMe</h1>
+        </div>
+        <div class="scroll-box">
+            {% if content %}
+                {{ content|safe }}
+            {% else %}
+                No locations available.
+            {% endif %}
+        </div>
+        <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        </a>
+    </div>
+</body>
+</center>
+</body>
+</html>
