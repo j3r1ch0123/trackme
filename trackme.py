@@ -7,7 +7,6 @@ from kivy.clock import Clock
 from urllib.request import urlopen
 import datetime
 import json
-import time as t
 import requests
 import os
 
