@@ -3,3 +3,4 @@ datetime
 json
 requests
 urllib
+setuptools>=65.5.1
